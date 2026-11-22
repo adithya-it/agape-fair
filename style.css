@@ -1,0 +1,713 @@
+/* colors and fonts */
+:root {
+  --red: #e5174a;
+  --crimson: #c8103e;
+  --pink-line: #f6d9e0;
+  --pink-soft: #fdeef2;
+  --heading: 'Poppins', Arial, sans-serif;
+  --body: Arial, Helvetica, sans-serif;
+}
+
+/* basic stuff */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: #111;
+  background: white;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* keeps the content in the middle */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* all big headings */
+h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  color: #000;
+  margin: 0;
+}
+
+/* round pink circle with an icon inside */
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ---------- hero ---------- */
+.hero {
+  /* white layer on top of the photo */
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)),
+    url("images/malaysia-students.jpg") center / cover no-repeat;
+  min-height: 100vh;
+  padding: 30px 24px 60px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  display: block;
+}
+
+.hero-logo {
+  height: 52px;
+  width: auto;
+  margin: 0 auto 65px;
+}
+
+.hero h1 {
+  font-family: var(--heading);
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: -0.5px;
+  color: var(--red);
+  margin: 0;
+}
+
+.hero .sub {
+  font-family: var(--heading);
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 55px;
+  color: #000;
+  margin: 19px 0 2px;
+}
+
+/* the red rounded banner */
+.banner {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background: var(--red);
+  color: white;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 54px;
+  letter-spacing: 0.4px;
+  padding: 13px 31px;
+  border-radius: 20px;
+}
+
+/* red pill button */
+.btn {
+  display: block;
+  width: fit-content;
+  margin: 44px auto 0;
+  background: var(--red);
+  color: white;
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  transition: transform 0.2s;
+}
+
+/* zoom button */
+.btn:hover,
+.submit:hover {
+  transform: scale(1.02);
+}
+
+.hero-dates {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+
+/* ---------- intro ---------- */
+.intro {
+  padding: 93px 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 4.56fr 5.1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.red-bar {
+  width: 65px;
+  height: 7px;
+  background: var(--red);
+  margin: 5px 0 25px;
+}
+
+.intro h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  max-width: 490px;
+}
+
+.text {
+  color: #666;
+  font-size: 16px;
+  line-height: 31.5px;
+  margin: 0;
+}
+
+/* the big red box with 40+ universities */
+.red-box {
+  background: var(--red);
+  color: white;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 33px;
+  letter-spacing: 0.5px;
+  padding: 28px 32px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(229, 23, 74, 0.25);
+  margin: 25px 0 22px;
+}
+
+
+/* ---------- venues (black) ---------- */
+.venues {
+  background: black;
+  color: white;
+  padding: 79px 0 85px;
+}
+
+.venues-top {
+  display: grid;
+  grid-template-columns: 52fr 43fr;
+  gap: 55px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+
+.small-label {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.venues h2 {
+  color: white;
+  font-size: 33px;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+
+.venues-text {
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.venue {
+  background: white;
+  color: black;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 32px;
+}
+
+/* red date box */
+.date {
+  flex: none;
+  width: 92px;
+  height: 134px;
+  background: var(--red);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date b {
+  font-size: 56px;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+.date span {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.venue h3 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0;
+}
+
+.time {
+  color: #666;
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.place {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.venue-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--crimson);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 4px;
+}
+
+
+/* ---------- what to expect ---------- */
+.expect {
+  padding: 97px 0;
+}
+
+.expect h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  max-width: 640px;
+  margin-bottom: 46px;
+}
+
+.expect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px;
+}
+
+.expect-card {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  padding: 26px 30px 28px 28px;
+  border: 1px solid var(--pink-line);
+  border-radius: 30px;
+}
+
+.expect-card p {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 6px 0 0;
+}
+
+/* last card takes the whole row */
+.expect-card:last-child {
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 18px;
+}
+
+.expect-card:last-child p {
+  margin: 3px 0 0;
+}
+
+
+/* ---------- representatives ---------- */
+.reps {
+  background: #fdf5f7;
+  padding: 97px 0;
+}
+
+.reps h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  margin-bottom: 43px;
+}
+
+.rep-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.rep .photo {
+  width: 100%;
+  aspect-ratio: 1.05 / 1;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 25px;
+}
+
+/* min-height keeps 2 lines of space so all descriptions line up */
+.rep h3 {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  min-height: 60px;
+  max-width: 230px;
+  margin: 24px 0 0;
+}
+
+.rep p {
+  color: #666;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0 0 25px;
+}
+
+/* white box with the university logo */
+.logo-card {
+  height: 150px;
+  background: white;
+  border: 1px solid #f0dce1;
+  border-top: 3px solid var(--crimson);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-card img {
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  max-height: 105px;
+}
+
+
+/* ---------- registration (black) ---------- */
+.register {
+  background: black;
+  color: white;
+  padding: 97px 0;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 485fr 586fr;
+  gap: 81px;
+  align-items: start;
+}
+
+.register-left {
+  padding-top: 25px;
+}
+
+.register h2 {
+  color: white;
+  font-size: 44px;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+
+.register-text {
+  font-size: 17.5px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.form-card {
+  background: white;
+  color: black;
+  padding: 37px 40px;
+  border-radius: 32px;
+}
+
+.form-card h3 {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  border-bottom: 2px solid var(--crimson);
+  margin: 0 0 26px;
+}
+
+.field {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #111;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+}
+
+input::placeholder {
+  color: #b3b3b3;
+}
+
+/* click a box: red border + pink glow */
+input:focus,
+select:focus {
+  border-color: var(--crimson);
+  box-shadow: 0 0 0 3px rgba(229, 23, 74, 0.2);
+  outline: none;
+}
+
+/* dropdown arrow */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+/* hide the bot field */
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  background: var(--red);
+  color: white;
+  border: 0;
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 17px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(229, 23, 74, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.note {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.closing {
+  text-align: center;
+  color: var(--crimson);
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.closing span {
+  color: #000;
+}
+
+/* message after submit (hidden at first) */
+.status-box {
+  display: none;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: #ffe8ee;
+  border-left: 4px solid var(--red);
+  font-size: 14px;
+}
+
+
+/* ---------- contact ---------- */
+.contact {
+  background: #fff3f5;
+  text-align: center;
+  padding: 70px 0 74px;
+}
+
+.contact h2 {
+  font-size: 31px;
+  line-height: 37px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.contact-sub {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.contact h3 {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 31px;
+  color: var(--crimson);
+  margin: 23px 0 35px;
+}
+
+/* third card is wider */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 21px;
+  border: 1px solid var(--pink-line);
+  border-radius: 24px;
+  transition: border-color 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--red);
+}
+
+.contact-card .label {
+  display: block;
+  color: var(--crimson);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.contact-card .value {
+  display: block;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.site {
+  display: inline-block;
+  margin-top: 3px;
+  color: var(--crimson);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+}
+
+
+/* ---------- phone and small screens ---------- */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 38px; line-height: 46px; }
+  .hero .sub { font-size: 28px; line-height: 36px; margin-top: 12px; }
+  .banner { font-size: 16px; line-height: 26px; padding: 12px 18px; }
+  .hero-logo { margin-bottom: 40px; }
+  .hero-dates { font-size: 12px; }
+
+  /* everything goes in one column */
+  .two-col,
+  .venues-top,
+  .venue-grid,
+  .expect-grid,
+  .rep-grid,
+  .register-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .venues-top { align-items: start; }
+
+  .intro,
+  .expect,
+  .reps,
+  .register { padding: 60px 0; }
+  .venues { padding: 60px 0; }
+  .contact { padding: 60px 0; }
+
+  .intro h2,
+  .expect h2,
+  .reps h2 { font-size: 32px; }
+  .venues h2 { font-size: 26px; line-height: 34px; }
+  .register h2 { font-size: 32px; line-height: 40px; }
+  .register-left { padding-top: 0; }
+  .contact h2 { font-size: 26px; line-height: 32px; }
+
+  .red-box { font-size: 15px; line-height: 26px; padding: 22px; }
+  .venue { flex-direction: column; }
+  .expect-card p { font-size: 17px; line-height: 26px; }
+  .rep h3 { min-height: 0; }
+  .form-card { padding: 28px 20px; }
+}
